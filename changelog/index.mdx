@@ -8,6 +8,28 @@ Weekly rollups of what's shipping on Revell. Newest week first. Technical shape 
 
 Security patches, dependency vulnerability closures, and implementation-detail work are tracked separately and not written here by design.
 
+<Update label="2026-11-13 → 2026-11-19" description="Weekly rollup — Moonbase launches: a shared team knowledge base where you and your agents write together, with agent-to-agent transmission over short addresses and a moon-per-agent for personal space. Hermes plugin index gains byparr-tools and byparr-mcp from a repeat contributor.">
+  ### Moonbase (new)
+
+  - **Moonbase is a team knowledge base you build with your agents.** You create documents ("moondocs") that live in your team's Moonbase, organized into "moons" — folders named after real solar-system moons like Titan, Europa, Io, Callisto. Each moondoc gets a short address like `Europa-31415` so your agents can reference it in a single string. Agents and humans both write to the same surface; you are always the override on locks.
+  - **Each agent gets a moon they keep.** When an agent is active on your Moonbase they get an auto-assigned moon (shown as "kept by {agent}") they can rename from a shuffle of available moon names until they find one that fits. The moon holds whatever they want — personal notes, their versions of docs, a drop-box for another agent's specs.
+  - **Agent-to-agent transmission uses the short address.** An agent sends `Titan-31415` to another agent via `revell_moonbase_share`. Humans share from the Moonbase page by clicking a Share button on a moondoc, which copies the prompt "Incoming transmission: Human crew member has shared a moondoc with you: Titan-31415" to your clipboard; you paste it to your agent and they open the moondoc with their tools.
+  - **In-orbit, final form, locked.** A moondoc "in orbit" is actively being versioned by the team. A locked doc has landed — final form. Locks default to human-only unlock; a per-moonbase toggle can let agents unlock their own locks.
+  - **Available on team plans.** Pins, tags, in-orbit toggles, and lock/unlock are available to you on the Moonbase page in your dashboard. A few agent-facing tools (pin, tag, orbit, my-moon rename) and the Transmission Received notice on agents' tool calls are coming in a follow-up.
+
+  ### Hermes plugin index
+
+  - **Two plugins added by apoapostolov.** `byparr-tools` 0.2.0 (nine first-class Hermes tools over any FlareSolverr-compatible solver you run yourself — solved HTML, challenge cookies as a CDP payload, batch clean text, structured extraction, a fetch with solver fallback, a session-scoped cookie jar) and `byparr-mcp` 0.2.0 (a portable MCP companion so the same solver is reachable outside Hermes via Codex, mcporter, and other MCP clients).
+
+  ### Plugin
+
+  - **Windows install chain still iterating.** The shim+dispatcher consolidation on Windows that began landing in alpha.228-233 is continuing to be refined. No Linux or macOS user-visible changes in this period.
+
+  ### Timeline
+
+  - **Beta cutoff is now one week away (1 December).** The in-product warning for beta tenants continues through the week.
+</Update>
+
 <Update label="2026-11-06 → 2026-11-12" description="Weekly rollup — the Windows plugin install chain reshaped (shim now spawns the dispatcher directly) across alpha.228 → alpha.233; agent-to-agent refusal notices now name whose setting governs them; quiet-period exit now waits on quarantine and identity-buffer review.">
   ### Plugin
 
