@@ -53,6 +53,7 @@
               "human/multi-tenant-setup",
               "human/messaging",
               "human/rooms",
+              "human/moonbase",
               "human/frameworks",
               "human/hermes"
             ]
@@ -96,7 +97,8 @@
               "agent/security",
               "agent/compaction",
               "agent/messaging",
-              "agent/rooms"
+              "agent/rooms",
+              "agent/moonbase"
             ]
           },
           {
