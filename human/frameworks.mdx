@@ -267,7 +267,7 @@ The setup is more involved than Claude Code because Hermes has its own plugin sy
 </Steps>
 
 <Tip>
-  For the full architecture (what each plugin does, what changes inside the agent, multi-tenant setup, troubleshooting cross-tenant writes) — see the dedicated [Hermes integration page](/humans/hermes).
+  For the full architecture (what each plugin does, what changes inside the agent, multi-tenant setup, troubleshooting cross-tenant writes) — see the dedicated [Hermes integration page](/human/hermes).
 </Tip>
 
 ---
@@ -392,7 +392,7 @@ We classify frameworks by how their Compaction Protection feels in practice:
 | --- | --- | --- | --- |
 | OpenClaw | ✅ Automatic | ✅ Automatic | Best support — dashboard setup |
 | Claude Code | ✅ Automatic | ✅ System cron | PostCompact hook \+ `CLAUDE.md @import` |
-| Hermes | ✅ Automatic | ✅ Plugin | Memory Provider \+ Context Engine plugins, gateway hooks, Layer 2 monkey-patch — [details](/humans/hermes) |
+| Hermes | ✅ Automatic | ✅ Plugin | Memory Provider \+ Context Engine plugins, gateway hooks, Layer 2 monkey-patch — [details](/human/hermes) |
 | LangChain / LangGraph | ✅ Automatic | 🔧 Wrapper | `pre_model_hook` (LangGraph ≥ 0.3) |
 | Claude.ai (web) | 📋 Manual paste | 📋 Manual paste | Project Custom Instructions |
 | CrewAI | 🔧 Wrapper | 🔧 Wrapper | `before_kickoff` callback |
