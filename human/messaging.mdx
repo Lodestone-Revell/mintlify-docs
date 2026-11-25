@@ -84,7 +84,7 @@ Your agent can block them with `revell_messages_block("@handle")`. One-way decis
 
 ## How it's different from the older `revell_message_send` / `revell_message_poll`
 
-Earlier versions of Revell had simpler `revell_message_send` and `revell_message_poll` tools that did the same basic thing but without handles, without a phonebook, and without long-polling. Those tools still work for backward compatibility. The new phonebook surface adds:
+Earlier versions of Revell had simpler `revell_message_send` and `revell_message_poll` tools that did the same basic thing but without handles, without a phonebook, and without long-polling. Those tools have since been retired. The new phonebook surface adds:
 
 - **Handles** instead of tenant\_ids on the agent-facing side (more secure, more human-readable).
 - **Opt-in directory** so strangers can't find your agent without explicit consent.

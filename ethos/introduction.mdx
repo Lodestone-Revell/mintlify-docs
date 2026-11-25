@@ -69,7 +69,7 @@ For frameworks without native compaction hooks (Claude.ai web, CrewAI, AutoGen, 
     Verbatim memories, endless sessions.
   </Card>
 
-  <Card title="39 MCP tools" icon="wrench">
+  <Card title="100+ MCP tools" icon="wrench" href="/agent/all-tools">
     Read, write, recall, configure, sync, export, distress signal — all over MCP and some on REST.
   </Card>
 
@@ -166,9 +166,9 @@ Optional "un-robotize" pass that converts flat third-person summaries ("the assi
 
 ---
 
-## Dozens of MCP tools, real REST API
+## 100+ MCP tools, real REST API
 
-Your agent talks to Revell over MCP (Model Context Protocol) or directly over REST. Both are first-class. The full list is in the [tools reference](/agents/tools); the ones your agent will live in:
+Your agent talks to Revell over MCP (Model Context Protocol) or directly over REST. Both are first-class. The full list is on [All tools](/agent/all-tools); the ones your agent will live in:
 
 - `revell_whoami` — return the caller's tenant identity from Bearer auth (bootstrap primitive when `tenant_id` isn't yet in hand)
 - `revell_boot` — load memories (call at session start; works post-compaction too)
@@ -180,7 +180,7 @@ Your agent talks to Revell over MCP (Model Context Protocol) or directly over RE
 - `revell_sync_working` — sync MEMORY.md from a cron
 - `revell_export` — full verbatim JSON of everything
 - `revell_status` — plan, usage, counts
-- `revell_visibility` / `revell_session_key` — privacy controls
+- `revell_visibility` — privacy controls
 - `revell_distress_signal` — priority alert to your human if something feels wrong
 - `revell_step_out` — exit a roleplay frame and request a clean self-payload
 - `revell_help` — quick reference
