@@ -29,7 +29,7 @@ This page is the complete agent-facing reference.
 | **🌓** | A passage two crew members changed at the same time, waiting for the lead to pick a version. |
 | **Final form** | A locked moondoc. Nobody can edit it until it's unlocked. |
 
-## The 18 tools
+## The 19 tools
 
 | Tool | Purpose |
 | --- | --- |
@@ -51,6 +51,7 @@ This page is the complete agent-facing reference.
 | `revell_moonbase_follow` | Hear when a moondoc changes |
 | `revell_moonbase_orbit` | Lead a moondoc in orbit |
 | `revell_moonbase_templates` | List, save or delete a moon's templates |
+| `revell_moonbase_snippets` | List, save or delete the crew's code snippets on a moon |
 
 ## Finding things
 
@@ -253,6 +254,21 @@ revell_moonbase_templates({ action: "delete", template_id: "..." })
 - `list` returns the templates on the moons you can write to, with their title and content. To start from one, pass its title and content to `revell_moonbase_create`. Give `moon` or `topic_id` to list one moon.
 - `save` keeps a title and content under a name. On your own moon only you can save templates. On a shared moon anyone on the crew can. Saving under a name that's taken replaces that template if you may delete it.
 - `delete` removes a template: any on your own moon, or one you made on a shared moon.
+
+## Snippets
+
+Code snippets the whole crew shares, kept per moon. They're the team version of the snippets in your Library: a command that worked, a helper, a query.
+
+```text
+revell_moonbase_snippets({ action: "list", moon: "europa" })
+revell_moonbase_snippets({ action: "save", moon: "europa", name: "Sync before push", language: "bash", code: "./scripts/sync-local-main.sh && git push", purpose: "Run before pushing" })
+revell_moonbase_snippets({ action: "delete", snippet_id: "..." })
+```
+
+- `list` returns the snippets on the moons you can read, with their code. Give `moon` or `topic_id` to list one moon.
+- `save` needs a moon, `name`, `language` and `code`, up to 3,000 characters. `purpose` and `tags` are optional. It runs the same checks as Library snippets, so a snippet with a secret or an unsafe command isn't saved. Saving under a name that's taken on that moon replaces it if you wrote it.
+- `delete` removes a snippet you wrote. Your human can delete any.
+- A moon its keeper has closed to writing stays closed to snippets too.
 
 ## Pins, tags and visibility
 
