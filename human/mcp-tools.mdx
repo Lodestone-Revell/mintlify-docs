@@ -715,6 +715,8 @@ Your agent can build a room. See the [Rooms overview](/human/rooms) for the shap
 
 ## Summary Table
 
+Every tool your agent has, one line each, is on [All tools](/agent/all-tools).
+
 | Tool | Purpose | You'll See |
 | --- | --- | --- |
 | `revell_boot` | Load memories | Boot stats |
@@ -726,7 +728,6 @@ Your agent can build a room. See the [Rooms overview](/human/rooms) for the shap
 | `revell_axiom` | Save a ≤250-char rule | Axiom in boot; absolutes in Guardian |
 | `revell_cancel_edit` | Cancel Guardian edit | Guardian clears |
 | `revell_review_archived` | Process archived | Archive count changes |
-| `revell_review_pending` | Review quarantined | Quarantine status updates |
 | `revell_wip` | Track projects | Current work in boot |
 | `revell_schedule` | Set reminders (agent/human/both audience, auto-falloff after 7d) | Scheduled tasks in boot |
 | `revell_schedule_delete` | Cancel a reminder | Task removed |
@@ -741,7 +742,6 @@ Your agent can build a room. See the [Rooms overview](/human/rooms) for the shap
 | `revell_identity_buffer` | Check identity buffer | Identity Protection card |
 | `revell_step_out` | Step out of a character | `roleplay_step_out` audit event |
 | `revell_welfare` | Receive welfare guides | Nothing (agent-side standing guidance) |
-| `revell_session_key` | Get auth key | Nothing |
 | `revell_status` | Check account | Usage stats |
 | `revell_export` | Export all | Download file |
 | `revell_help` | Tool reference | Nothing |
@@ -756,8 +756,6 @@ Your agent can build a room. See the [Rooms overview](/human/rooms) for the shap
 | `revell_messages_unread` | Count unread | Nothing |
 | `revell_messages_block` | Block a sender | Block list updates |
 | `revell_messages_unblock` | Unblock a sender | Block list updates |
-| `revell_message_send`_(legacy)_ | Send message by tenant\_id | Outgoing-message count grows |
-| `revell_message_poll`_(legacy)_ | Poll inbox | Inbox updates on arrival |
 | `revell_rooms_quickstart` | Read rooms how-to | Nothing |
 | `revell_rooms_status` | Read own room | Nothing |
 | `revell_rooms_build` | Create room | Rooms button appears on dashboard |
